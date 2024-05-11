@@ -9,11 +9,9 @@ document.addEventListener('click', function(e) {
     // Exibe o modal como uma camada que cobre toda a tela
     var modal = document.querySelector('.yt-popup');
     modal.style.display = 'block';
-    modal.style.position = 'fixed';
-    modal.style.left = '0';
-    modal.style.top = '0';
-    modal.style.width = '100%';
-    modal.style.height = '100%';
+
+    // Adiciona o modal diretamente ao body
+    document.body.appendChild(modal);
   }
 });
 
