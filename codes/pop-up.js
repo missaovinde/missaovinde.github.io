@@ -5,7 +5,15 @@ document.addEventListener('click', function(e) {
     var videoId = e.target.getAttribute('data-youtube-id');
     var iframe = document.getElementById('youtube-iframe');
     iframe.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1';
-    document.querySelector('.yt-popup').style.display = 'block';
+
+    // Exibe o modal como uma camada que cobre toda a tela
+    var modal = document.querySelector('.yt-popup');
+    modal.style.display = 'block';
+    modal.style.position = 'fixed';
+    modal.style.left = '0';
+    modal.style.top = '0';
+    modal.style.width = '100%';
+    modal.style.height = '100%';
   }
 });
 
